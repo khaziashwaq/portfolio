@@ -8,7 +8,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Software Engineer | Portfolio",
+  title: "Ashwaq Khazi | Portfolio",
   description:
     "Software Engineer specializing in full-stack development, building scalable APIs, and crafting high-performance web applications.",
 };
