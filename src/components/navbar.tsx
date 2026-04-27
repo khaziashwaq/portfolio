@@ -36,8 +36,8 @@ export function Navbar() {
             className="flex items-center gap-1"
           >
             <svg
-              width="36"
-              height="36"
+              width="64"
+              height="64"
               viewBox="0 0 64 64"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -47,17 +47,6 @@ export function Navbar() {
               <path d="M10 32L22 20V26L16 32L22 38V44L10 32Z" fill="#22d3ee" />
               {/* Closing angle bracket */}
               <path d="M54 32L42 44V38L48 32L42 26V20L54 32Z" fill="#22d3ee" />
-              {/* Forward slash */}
-              <rect
-                x="29"
-                y="16"
-                width="3"
-                height="34"
-                rx="1.5"
-                transform="rotate(15 29 16)"
-                fill="#22d3ee"
-                opacity="0.35"
-              />
               {/* AK text */}
               <text
                 x="32"
