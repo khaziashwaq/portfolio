@@ -5,7 +5,7 @@ import { useEffect, useRef, useCallback } from "react";
 export function SketchCat() {
   const svgRef = useRef<SVGSVGElement>(null);
 
-  const animate = useCallback(() => {
+  const animate = useCallback((): ReturnType<typeof setTimeout> | undefined => {
     const svg = svgRef.current;
     if (!svg) return;
 

@@ -37,7 +37,7 @@ export function Contact() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:ashwaqkhazi1729@gmail.com"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
               "text-base gap-2"
