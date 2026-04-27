@@ -15,7 +15,7 @@ const experiences: ExperienceItem[] = [
   {
     company: "Inspera (SA Tech)",
     role: "Software Engineer",
-    period: "Present",
+    period: "Jun 2025 – Present",
     current: true,
     bullets: [
       "Engineered and optimized critical features for the Inspera exam lockdown and remote proctoring application, enhancing security protocols to ensure a stable and uninterrupted experience for candidates during high-stakes assessments.",
@@ -23,12 +23,12 @@ const experiences: ExperienceItem[] = [
       "Spearheaded the Web Accessibility initiative as team lead, driving a company-wide overhaul of Inspera's product suite to achieve full WCAG 2.2 AA compliance and align with the European Accessibility Act (EAA), ensuring all digital assessment tools meet stringent EU regulatory requirements ahead of the 2025 enforcement deadline.",
       "Collaborated with multiple stakeholders to manage complex, evolving requirements, consistently ensuring the timely delivery of product updates and platform enhancements that satisfy diverse institutional needs.",
     ],
-    tech: ["React", "Redux", "Next.js", "TypeScript", "WCAG", "a11y"],
+    tech: ["React", "Redux", "Next.js", "TypeScript", "Go", "WCAG", "a11y"],
   },
   {
     company: "HSBC",
     role: "Software Engineer",
-    period: "Aug 2023 – Present",
+    period: "Aug 2023 – May 2025",
     bullets: [
       "Developed and deployed APIs for HSBC's Asia Pacific operations, ensuring seamless integration and functionality across diverse regions, resulting in a 20% increase in consumer satisfaction and a 15% decrease in operational errors.",
       "Utilized a robust tech stack comprising Spring Boot, Postman, Docker, Kubernetes, Jenkins, and Git to streamline the development, deployment, and maintenance of APIs.",
