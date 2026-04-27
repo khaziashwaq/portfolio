@@ -61,7 +61,7 @@ export function Projects() {
                     <h3 className="text-xl font-semibold">{project.title}</h3>
                     <Badge
                       variant="secondary"
-                      className="bg-teal-500/10 text-teal-400 border-teal-500/20 text-xs"
+                      className="bg-cyan-500/10 text-cyan-400 border-cyan-500/20 text-xs"
                     >
                       Open Source
                     </Badge>

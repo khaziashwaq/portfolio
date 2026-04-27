@@ -6,7 +6,6 @@ import { Projects } from "@/components/sections/projects";
 import { Publications } from "@/components/sections/publications";
 import { SocialProof } from "@/components/sections/social-proof";
 import { Contact } from "@/components/sections/contact";
-import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
         <SocialProof />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }

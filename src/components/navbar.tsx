@@ -18,87 +18,105 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header
-      className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60"
-      role="banner"
-    >
-      <nav
-        className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"
-        aria-label="Main navigation"
+    <>
+      {/* Top bar - always on top */}
+      <header
+        className={cn(
+          "fixed top-0 z-50 w-full border-b border-border/40 backdrop-blur-md",
+          mobileOpen ? "bg-background" : "bg-background/80 supports-[backdrop-filter]:bg-background/60"
+        )}
+        role="banner"
       >
-        <a
-          href="#hero"
-          className="text-lg font-bold tracking-tight text-foreground"
+        <nav
+          className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6"
+          aria-label="Main navigation"
         >
-          &lt;AK&gt;
-        </a>
-
-        {/* Desktop nav */}
-        <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-          <li>
-            <a
-              href="https://www.linkedin.com/in/ashwaq-khazi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(buttonVariants({ size: "sm" }))}
+          <a
+            href="#hero"
+            className="flex items-center gap-1"
+          >
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 64 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
-              Let&apos;s Connect
-            </a>
-          </li>
-        </ul>
+              {/* Opening angle bracket */}
+              <path d="M10 32L22 20V26L16 32L22 38V44L10 32Z" fill="#22d3ee" />
+              {/* Closing angle bracket */}
+              <path d="M54 32L42 44V38L48 32L42 26V20L54 32Z" fill="#22d3ee" />
+              {/* Forward slash */}
+              <rect
+                x="29"
+                y="16"
+                width="3"
+                height="34"
+                rx="1.5"
+                transform="rotate(15 29 16)"
+                fill="#22d3ee"
+                opacity="0.35"
+              />
+              {/* AK text */}
+              <text
+                x="32"
+                y="39"
+                fontFamily="monospace"
+                fontSize="16"
+                fontWeight="800"
+                fill="white"
+                textAnchor="middle"
+              >
+                AK
+              </text>
+            </svg>
+          </a>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </nav>
-
-      {/* Mobile nav */}
-      {mobileOpen && (
-        <div className="border-t border-border/40 bg-background md:hidden">
-          <ul className="flex flex-col gap-4 px-6 py-6">
+          {/* Desktop nav */}
+          <ul className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile toggle */}
+          <button
+            className="flex items-center justify-center h-10 w-10 md:hidden text-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
+      </header>
+
+      {/* Mobile nav overlay - separate from header so it can't cover the button */}
+      {mobileOpen && (
+        <div className="fixed inset-0 top-16 z-40 bg-background md:hidden">
+          <ul className="flex flex-col gap-4 px-6 py-6">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="block text-lg text-muted-foreground transition-colors hover:text-foreground py-2"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href="https://github.com/Rugz007/glaze-ui"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(
-                  buttonVariants({ size: "sm" }),
-                  "w-full justify-center"
-                )}
-              >
-                Let&apos;s Connect
-              </a>
-            </li>
           </ul>
         </div>
       )}
-    </header>
+    </>
   );
 }

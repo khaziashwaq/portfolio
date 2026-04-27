@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Ashwaq Khazi | Portfolio",
   description:
     "Software Engineer specializing in full-stack development, building scalable APIs, and crafting high-performance web applications.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +26,7 @@ export default function RootLayout({
       lang="en"
       className={`${jetbrainsMono.variable} dark h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground font-mono">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-mono overflow-x-hidden">
         {children}
       </body>
     </html>

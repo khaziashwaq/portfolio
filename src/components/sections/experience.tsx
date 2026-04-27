@@ -95,8 +95,8 @@ export function Experience() {
               >
                 {exp.current && (
                   <>
-                    <span className="absolute inset-0 animate-ping rounded-full bg-teal-400 opacity-75" />
-                    <span className="h-full w-full rounded-full bg-teal-400" />
+                    <span className="absolute inset-0 animate-ping rounded-full bg-cyan-400 opacity-75" />
+                    <span className="h-full w-full rounded-full bg-cyan-400" />
                   </>
                 )}
               </div>
@@ -118,7 +118,7 @@ export function Experience() {
                   <div className="mt-3">
                     <Badge
                       variant="secondary"
-                      className="bg-teal-500/10 text-teal-400 border-teal-500/20"
+                      className="bg-cyan-500/10 text-cyan-400 border-cyan-500/20"
                     >
                       🏆 {exp.highlight}
                     </Badge>
