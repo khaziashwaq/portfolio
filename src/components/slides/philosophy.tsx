@@ -21,7 +21,7 @@ const pillars = [
   {
     number: "03",
     title: "END USER CENTRICITY",
-    text: "I care about reducing friction for user because frustration shouldn't be part of UX.",
+    text: "I care about reducing friction for users because frustration shouldn't be part of UX.",
   },
   {
     number: "04",
