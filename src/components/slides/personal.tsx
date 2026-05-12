@@ -319,7 +319,7 @@ export function PersonalSlide() {
                     <p className="text-sm font-medium">MMA</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
                       I follow the UFC closely and have recently started doing
-                      bag work, shadow boxing.
+                      bag work and shadow boxing.
                     </p>
                   </div>
                 </div>
@@ -328,7 +328,7 @@ export function PersonalSlide() {
                   <div>
                     <p className="text-sm font-medium">Bouldering</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
-                      I'm a intermidiate climber and I enjoy cracking the beta.
+                      I'm an intermediate climber and I enjoy cracking the beta.
                     </p>
                   </div>
                 </div>
