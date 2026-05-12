@@ -343,6 +343,15 @@ export function PersonalSlide() {
                     </p>
                   </div>
                 </div>
+                <div className="flex items-start gap-3 rounded-md border border-border bg-white/[0.01] p-2.5">
+                  <span className="text-base">🏋️</span>
+                  <div>
+                    <p className="text-sm font-medium">Gym</p>
+                    <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
+                      I lift 5 days a week following a Push, Pull, Legs, Arms, Chest &amp; Back split.
+                    </p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

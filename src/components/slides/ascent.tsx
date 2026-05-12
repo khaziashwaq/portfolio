@@ -66,7 +66,7 @@ export function AscentSlide() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease }}
           >
-            <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50">
+            <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50 mt-5">
               02 — Ascent
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
