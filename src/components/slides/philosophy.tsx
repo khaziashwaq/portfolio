@@ -11,22 +11,22 @@ const pillars = [
   {
     number: "01",
     title: "PRAGMATISM",
-    text: "I believe in delivering real value through software, balancing ideal solutions with practical constraints and timelines.",
+    text: "I believe in pragmatic engineering: do it right, but also do it before the coffee gets cold.",
   },
   {
     number: "02",
     title: "DISTILLATION",
-    text: "I focus on simplifying complex problems and extracting the essence of what truly matters, creating elegant and efficient solutions.",
+    text: "I believe engineering is about removing unnecessary complexity to reveal the core of a problem and its solution.",
   },
   {
     number: "03",
     title: "END USER CENTRICITY",
-    text: "I prioritize the needs and experiences of end users, ensuring that software solutions are intuitive, accessible, and impactful.",
+    text: "I care about reducing friction for user because frustration shouldn't be part of UX.",
   },
   {
     number: "04",
     title: "INTELLECTUAL HUMILITY",
-    text: "I acknowledge the limits of my knowledge and remain open to new ideas, perspectives, and feedback.",
+    text: "I enjoy learning from people smarter than me and thankfully, the tech industry makes that very easy.",
   },
 ];
 
