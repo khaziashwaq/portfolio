@@ -92,7 +92,7 @@ function QuoteRotator() {
 export function PhilosophySlide() {
   return (
     <Slide id="philosophy">
-      <div className="relative flex min-h-full w-full items-start sm:items-center justify-center px-4 sm:px-16 lg:px-24 py-16 sm:py-0">
+      <div className="relative flex min-h-full w-full items-center justify-center px-4 sm:px-16 lg:px-24 py-0">
         {/* Subtle grid background */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.02]"
@@ -127,7 +127,7 @@ export function PhilosophySlide() {
             <QuoteRotator />
           </motion.div>
 
-          {/* Card collage — hidden on mobile, shown on md+ */}
+          {/* Card collage — desktop */}
           <motion.div
             className="relative mt-10 hidden md:block"
             style={{ width: 660, height: 420 }}
@@ -140,10 +140,10 @@ export function PhilosophySlide() {
               className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
               style={{ top: 0, left: 0, width: 210, height: 190 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
-              animate={{ opacity: 1, scale: 1, rotate: -2 }}
+              animate={{ opacity: 1, scale: 1, rotate: -12 }}
               whileHover={{
                 scale: 1.06,
-                rotate: 0,
+                rotate: -10,
                 zIndex: 10,
                 transition: { duration: 0.25 },
               }}
@@ -184,35 +184,12 @@ export function PhilosophySlide() {
               </div>
             </motion.div>
 
-            {/* Photo — center */}
-            <motion.div
-              className="absolute overflow-hidden rounded-xl border border-white/[0.08] bg-card/80 shadow-lg shadow-black/25"
-              style={{ top: 10, left: 200, width: 240, height: 380 }}
-              initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
-              animate={{ opacity: 1, scale: 1, rotate: -0.5 }}
-              whileHover={{
-                scale: 1.04,
-                rotate: 0,
-                zIndex: 10,
-                transition: { duration: 0.25 },
-              }}
-              transition={{ duration: 0.5, delay: 0.25, ease }}
-            >
-              <Image
-                src="/me.png"
-                alt="Ashwaq Khazi"
-                fill
-                className="object-cover"
-                priority
-              />
-            </motion.div>
-
-            {/* Right cards */}
+            {/* Right cards (behind photo) */}
             <motion.div
               className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
               style={{ top: 0, left: 440, width: 210, height: 190 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
-              animate={{ opacity: 1, scale: 1, rotate: 2 }}
+              animate={{ opacity: 1, scale: 1, rotate: 4 }}
               whileHover={{
                 scale: 1.06,
                 rotate: 0,
@@ -236,7 +213,7 @@ export function PhilosophySlide() {
               className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
               style={{ top: 210, left: 450, width: 215, height: 195 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
-              animate={{ opacity: 1, scale: 1, rotate: -1.5 }}
+              animate={{ opacity: 1, scale: 1, rotate: -10.5 }}
               whileHover={{
                 scale: 1.06,
                 rotate: 0,
@@ -255,55 +232,141 @@ export function PhilosophySlide() {
                 </p>
               </div>
             </motion.div>
+
+            {/* Photo — center (in front of right cards) */}
+            <motion.div
+              className="absolute overflow-hidden"
+              style={{ top: 10, left: 180, width: 300, height: 440 }}
+              initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
+              animate={{ opacity: 1, scale: 1, rotate: -0.5 }}
+              whileHover={{
+                scale: 1.04,
+                rotate: 0,
+                zIndex: 10,
+                transition: { duration: 0.25 },
+              }}
+              transition={{ duration: 0.5, delay: 0.25, ease }}
+            >
+              <Image
+                src="/me.svg"
+                alt="Ashwaq Khazi"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
           </motion.div>
 
-          {/* Mobile cards — grid layout for small screens */}
+          {/* Card collage — mobile (scaled down) */}
           <motion.div
-            className="mt-8 w-full grid grid-cols-2 gap-3 md:hidden px-2"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3, ease }}
+            className="relative mt-4 md:hidden mx-auto"
+            style={{ width: 330, height: 210 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2, ease }}
           >
-            {/* Photo card */}
+            {/* Left cards */}
             <motion.div
-              className="col-span-2 mx-auto overflow-hidden rounded-xl border border-white/[0.08] bg-card/80 shadow-lg shadow-black/25"
-              style={{ width: "60%", height: 200 }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.25, ease }}
+              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              style={{ top: 0, left: 0, width: 105, height: 95 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1, rotate: -12 }}
+              whileTap={{ scale: 1.08, rotate: -10, zIndex: 10 }}
+              transition={{ duration: 0.4, delay: 0.3, ease }}
             >
-              <div className="relative h-full w-full">
-                <Image
-                  src="/me.png"
-                  alt="Ashwaq Khazi"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <span className="text-[10px] font-mono text-accent-color/60">
+                01
+              </span>
+              <div>
+                <p className="text-[10px] font-semibold tracking-wider uppercase">
+                  {pillars[0].title}
+                </p>
+                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
+                  {pillars[0].text}
+                </p>
               </div>
             </motion.div>
 
-            {pillars.map((p, i) => (
-              <motion.div
-                key={p.number}
-                className="rounded-xl border border-white/[0.06] bg-card/80 p-3.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between min-h-[130px]"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.35 + i * 0.08, ease }}
-              >
-                <span className="text-xs font-mono text-accent-color/60">
-                  {p.number}
-                </span>
-                <div>
-                  <p className="text-sm font-semibold tracking-wider uppercase">
-                    {p.title}
-                  </p>
-                  <p className="mt-1 text-xs leading-snug text-muted-foreground/70">
-                    {p.text}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+            <motion.div
+              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              style={{ top: 105, left: -5, width: 108, height: 98 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1, rotate: 1.5 }}
+              whileTap={{ scale: 1.08, rotate: 0, zIndex: 10 }}
+              transition={{ duration: 0.4, delay: 0.38, ease }}
+            >
+              <span className="text-[10px] font-mono text-accent-color/60">
+                02
+              </span>
+              <div>
+                <p className="text-[10px] font-semibold tracking-wider uppercase">
+                  {pillars[1].title}
+                </p>
+                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
+                  {pillars[1].text}
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right cards (behind photo) */}
+            <motion.div
+              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              style={{ top: 0, left: 220, width: 105, height: 95 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1, rotate: 4 }}
+              whileTap={{ scale: 1.08, rotate: 2, zIndex: 10 }}
+              transition={{ duration: 0.4, delay: 0.46, ease }}
+            >
+              <span className="text-[10px] font-mono text-accent-color/60">
+                03
+              </span>
+              <div>
+                <p className="text-[10px] font-semibold tracking-wider uppercase">
+                  {pillars[2].title}
+                </p>
+                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
+                  {pillars[2].text}
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              style={{ top: 105, left: 225, width: 108, height: 98 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1, rotate: -10.5 }}
+              whileTap={{ scale: 1.08, rotate: -8, zIndex: 10 }}
+              transition={{ duration: 0.4, delay: 0.54, ease }}
+            >
+              <span className="text-[10px] font-mono text-accent-color/60">
+                04
+              </span>
+              <div>
+                <p className="text-[10px] font-semibold tracking-wider uppercase">
+                  {pillars[3].title}
+                </p>
+                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
+                  {pillars[3].text}
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Photo — center (in front of right cards) */}
+            <motion.div
+              className="absolute overflow-hidden"
+              style={{ top: 5, left: 90, width: 150, height: 220 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1, rotate: -0.5 }}
+              transition={{ duration: 0.5, delay: 0.25, ease }}
+            >
+              <Image
+                src="/me.svg"
+                alt="Ashwaq Khazi"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
