@@ -10,23 +10,23 @@ const ease = [0.25, 0.1, 0.25, 1] as const;
 const pillars = [
   {
     number: "01",
-    title: "BUILD",
-    text: "I like creating systems that reduce friction and solve real problems people actually have.",
+    title: "PRAGMATISM",
+    text: "I believe in delivering real value through software, balancing ideal solutions with practical constraints and timelines.",
   },
   {
     number: "02",
-    title: "SYSTEMS",
-    text: "I enjoy scalable architecture, engineering clarity, and infrastructure that holds under pressure.",
+    title: "DISTILLATION",
+    text: "I focus on simplifying complex problems and extracting the essence of what truly matters, creating elegant and efficient solutions.",
   },
   {
     number: "03",
-    title: "PROGRESSION",
-    text: "I treat engineering like athletic training, deliberate, consistent, compounding over time.",
+    title: "END USER CENTRICITY",
+    text: "I prioritize the needs and experiences of end users, ensuring that software solutions are intuitive, accessible, and impactful.",
   },
   {
     number: "04",
-    title: "CURIOSITY",
-    text: "Currently exploring AI systems, distributed software, and product design at the intersection of all three.",
+    title: "INTELLECTUAL HUMILITY",
+    text: "I acknowledge the limits of my knowledge and remain open to new ideas, perspectives, and feedback.",
   },
 ];
 
@@ -118,18 +118,16 @@ export function PhilosophySlide() {
               Ashwaq Khazi
             </h1>
             <p className="mt-5 mx-auto max-w-2xl text-sm sm:text-base lg:text-lg leading-relaxed text-muted-foreground px-2">
-              I&apos;m a software engineer who thrives at the intersection of
-              complex problem-solving and product impact. From building
-              mission-critical exam security at Inspera to deploying APIs
-              powering HSBC&apos;s Asia Pacific operations — I bring relentless
-              focus on reliability, performance, and user experience.
+              I build software at Inspera. Previously, I worked on APIs powering
+              operations at HSBC. I enjoy solving messy problems, designing
+              systems, and using software to make things simpler and faster.
             </p>
             <QuoteRotator />
           </motion.div>
 
-          {/* Card collage — desktop */}
+          {/* Card collage */}
           <motion.div
-            className="relative mt-10 hidden md:block"
+            className="relative mt-6 md:mt-10 origin-top scale-[0.5] sm:scale-[0.65] md:scale-100 mb-[-210px] sm:mb-[-147px] md:mb-0"
             style={{ width: 660, height: 420 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -137,7 +135,7 @@ export function PhilosophySlide() {
           >
             {/* Left cards */}
             <motion.div
-              className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              className="absolute overflow-hidden rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col gap-3"
               style={{ top: 0, left: 0, width: 210, height: 190 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
               animate={{ opacity: 1, scale: 1, rotate: -12 }}
@@ -147,21 +145,22 @@ export function PhilosophySlide() {
                 zIndex: 10,
                 transition: { duration: 0.25 },
               }}
+              whileTap={{ scale: 1.08, rotate: -10, zIndex: 10 }}
               transition={{ duration: 0.4, delay: 0.3, ease }}
             >
               <span className="text-sm font-mono text-accent-color/60">01</span>
               <div>
-                <p className="text-base font-semibold tracking-wider uppercase">
+                <p className="text-sm font-semibold tracking-wider uppercase">
                   {pillars[0].title}
                 </p>
-                <p className="mt-1.5 text-sm leading-snug text-muted-foreground/70">
+                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[0].text}
                 </p>
               </div>
             </motion.div>
 
             <motion.div
-              className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              className="absolute overflow-hidden rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col gap-3"
               style={{ top: 210, left: -10, width: 215, height: 195 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
               animate={{ opacity: 1, scale: 1, rotate: 1.5 }}
@@ -171,14 +170,15 @@ export function PhilosophySlide() {
                 zIndex: 10,
                 transition: { duration: 0.25 },
               }}
+              whileTap={{ scale: 1.08, rotate: 0, zIndex: 10 }}
               transition={{ duration: 0.4, delay: 0.38, ease }}
             >
               <span className="text-sm font-mono text-accent-color/60">02</span>
               <div>
-                <p className="text-base font-semibold tracking-wider uppercase">
+                <p className="text-sm font-semibold tracking-wider uppercase">
                   {pillars[1].title}
                 </p>
-                <p className="mt-1.5 text-sm leading-snug text-muted-foreground/70">
+                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[1].text}
                 </p>
               </div>
@@ -186,7 +186,7 @@ export function PhilosophySlide() {
 
             {/* Right cards (behind photo) */}
             <motion.div
-              className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              className="absolute overflow-hidden rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col gap-3"
               style={{ top: 0, left: 440, width: 210, height: 190 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
               animate={{ opacity: 1, scale: 1, rotate: 4 }}
@@ -196,21 +196,22 @@ export function PhilosophySlide() {
                 zIndex: 10,
                 transition: { duration: 0.25 },
               }}
+              whileTap={{ scale: 1.08, rotate: 2, zIndex: 10 }}
               transition={{ duration: 0.4, delay: 0.46, ease }}
             >
               <span className="text-sm font-mono text-accent-color/60">03</span>
               <div>
-                <p className="text-base font-semibold tracking-wider uppercase">
+                <p className="text-sm font-semibold tracking-wider uppercase">
                   {pillars[2].title}
                 </p>
-                <p className="mt-1.5 text-sm leading-snug text-muted-foreground/70">
+                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[2].text}
                 </p>
               </div>
             </motion.div>
 
             <motion.div
-              className="absolute rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
+              className="absolute overflow-hidden rounded-xl border border-white/[0.06] bg-card/80 p-5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col gap-3"
               style={{ top: 210, left: 450, width: 215, height: 195 }}
               initial={{ opacity: 0, scale: 0.85, rotate: 0 }}
               animate={{ opacity: 1, scale: 1, rotate: -10.5 }}
@@ -220,14 +221,15 @@ export function PhilosophySlide() {
                 zIndex: 10,
                 transition: { duration: 0.25 },
               }}
+              whileTap={{ scale: 1.08, rotate: -8, zIndex: 10 }}
               transition={{ duration: 0.4, delay: 0.54, ease }}
             >
               <span className="text-sm font-mono text-accent-color/60">04</span>
               <div>
-                <p className="text-base font-semibold tracking-wider uppercase">
+                <p className="text-sm font-semibold tracking-wider uppercase">
                   {pillars[3].title}
                 </p>
-                <p className="mt-1.5 text-sm leading-snug text-muted-foreground/70">
+                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[3].text}
                 </p>
               </div>
@@ -245,118 +247,6 @@ export function PhilosophySlide() {
                 zIndex: 10,
                 transition: { duration: 0.25 },
               }}
-              transition={{ duration: 0.5, delay: 0.25, ease }}
-            >
-              <Image
-                src="/me.svg"
-                alt="Ashwaq Khazi"
-                fill
-                className="object-cover"
-                priority
-              />
-            </motion.div>
-          </motion.div>
-
-          {/* Card collage — mobile (scaled down) */}
-          <motion.div
-            className="relative mt-4 md:hidden mx-auto"
-            style={{ width: 330, height: 210 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2, ease }}
-          >
-            {/* Left cards */}
-            <motion.div
-              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
-              style={{ top: 0, left: 0, width: 105, height: 95 }}
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1, rotate: -12 }}
-              whileTap={{ scale: 1.08, rotate: -10, zIndex: 10 }}
-              transition={{ duration: 0.4, delay: 0.3, ease }}
-            >
-              <span className="text-[10px] font-mono text-accent-color/60">
-                01
-              </span>
-              <div>
-                <p className="text-[10px] font-semibold tracking-wider uppercase">
-                  {pillars[0].title}
-                </p>
-                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
-                  {pillars[0].text}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
-              style={{ top: 105, left: -5, width: 108, height: 98 }}
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1, rotate: 1.5 }}
-              whileTap={{ scale: 1.08, rotate: 0, zIndex: 10 }}
-              transition={{ duration: 0.4, delay: 0.38, ease }}
-            >
-              <span className="text-[10px] font-mono text-accent-color/60">
-                02
-              </span>
-              <div>
-                <p className="text-[10px] font-semibold tracking-wider uppercase">
-                  {pillars[1].title}
-                </p>
-                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
-                  {pillars[1].text}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Right cards (behind photo) */}
-            <motion.div
-              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
-              style={{ top: 0, left: 220, width: 105, height: 95 }}
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1, rotate: 4 }}
-              whileTap={{ scale: 1.08, rotate: 2, zIndex: 10 }}
-              transition={{ duration: 0.4, delay: 0.46, ease }}
-            >
-              <span className="text-[10px] font-mono text-accent-color/60">
-                03
-              </span>
-              <div>
-                <p className="text-[10px] font-semibold tracking-wider uppercase">
-                  {pillars[2].title}
-                </p>
-                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
-                  {pillars[2].text}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute rounded-lg border border-white/[0.06] bg-card/80 p-2.5 backdrop-blur-sm shadow-md shadow-black/15 flex flex-col justify-between"
-              style={{ top: 105, left: 225, width: 108, height: 98 }}
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1, rotate: -10.5 }}
-              whileTap={{ scale: 1.08, rotate: -8, zIndex: 10 }}
-              transition={{ duration: 0.4, delay: 0.54, ease }}
-            >
-              <span className="text-[10px] font-mono text-accent-color/60">
-                04
-              </span>
-              <div>
-                <p className="text-[10px] font-semibold tracking-wider uppercase">
-                  {pillars[3].title}
-                </p>
-                <p className="mt-0.5 text-[8px] leading-snug text-muted-foreground/70 line-clamp-2">
-                  {pillars[3].text}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Photo — center (in front of right cards) */}
-            <motion.div
-              className="absolute overflow-hidden"
-              style={{ top: 5, left: 90, width: 150, height: 220 }}
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1, rotate: -0.5 }}
               transition={{ duration: 0.5, delay: 0.25, ease }}
             >
               <Image

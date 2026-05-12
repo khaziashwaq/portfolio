@@ -29,9 +29,9 @@ const challenges: Challenge[] = [
       "Open-source library enabling rapid accessible development with zero runtime CSS overhead.",
     stack: ["TypeScript", "React", "Tailwind CSS", "Radix UI"],
     decisions: [
-      "Radix over custom primitives — accessibility by default",
-      "TS generics for API — compile-time safety",
-      "Zero-config Tailwind — no setup friction",
+      "Chose Radix UI to get accessibility and usability right from the start instead of reinventing core components.",
+      "Used TypeScript generics to make the API safer and easier to scale as the project grew.",
+      "Kept Tailwind setup minimal and zero-config to reduce friction and move faster.",
     ],
     link: "https://github.com/Rugz007/glaze-ui",
   },
@@ -101,7 +101,9 @@ export function ChallengesSlide() {
                     <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/30 mb-1">
                       Objective
                     </p>
-                    <p className="text-base text-foreground/90">{c.objective}</p>
+                    <p className="text-base text-foreground/90">
+                      {c.objective}
+                    </p>
                   </div>
 
                   <div className="grid gap-3 sm:grid-cols-2">
