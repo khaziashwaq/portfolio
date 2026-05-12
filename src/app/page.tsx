@@ -1,25 +1,28 @@
-import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/sections/hero";
-import { About } from "@/components/sections/about";
-import { Experience } from "@/components/sections/experience";
-import { Projects } from "@/components/sections/projects";
-import { Publications } from "@/components/sections/publications";
-import { SocialProof } from "@/components/sections/social-proof";
-import { Contact } from "@/components/sections/contact";
+"use client";
+
+import { Carousel, useCarousel } from "@/components/carousel";
+import { Dock } from "@/components/dock";
+import {
+  PhilosophySlide,
+  AscentSlide,
+  ChallengesSlide,
+  ContactSlide,
+  PersonalSlide,
+} from "@/components/slides";
 
 export default function Home() {
+  const { activeIndex, goToSection } = useCarousel();
+
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Publications />
-        <SocialProof />
-        <Contact />
-      </main>
+      <Carousel activeIndex={activeIndex}>
+        <PhilosophySlide />
+        <AscentSlide />
+        <ChallengesSlide />
+        <ContactSlide />
+        <PersonalSlide />
+      </Carousel>
+      <Dock activeIndex={activeIndex} onNavigate={goToSection} />
     </>
   );
 }

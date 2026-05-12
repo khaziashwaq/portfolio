@@ -77,7 +77,7 @@ export function SketchCat() {
         }
         .sketch {
           fill: none;
-          stroke: #22d3ee;
+          stroke: #3b82f6;
           stroke-width: 1.1;
           stroke-linecap: round;
           stroke-linejoin: round;

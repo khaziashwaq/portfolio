@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
@@ -7,10 +7,15 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Ashwaq Khazi | Portfolio",
+  title: "Ashwaq Khazi — Engineer",
   description:
-    "Software Engineer specializing in full-stack development, building scalable APIs, and crafting high-performance web applications.",
+    "Full-stack engineer focused on scalable products, AI systems, and software that solves real-world problems.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -24,9 +29,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jetbrainsMono.variable} dark h-full antialiased scroll-smooth`}
+      className={`${jetbrainsMono.variable} ${inter.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground font-mono overflow-x-hidden">
+      <body className="h-full bg-background text-foreground font-sans overflow-hidden">
         {children}
       </body>
     </html>
