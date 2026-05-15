@@ -254,6 +254,31 @@ export function PersonalSlide() {
                 </a>
               </div>
               <ReadingLibrary />
+
+              {/* Writing */}
+              <div className="mt-5 pt-4 border-t border-border/50">
+                <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/30 mb-2">
+                  ✍️ Writing
+                </p>
+                <a
+                  href="https://medium.com/@ashwaqkhazi1729/a-nietzschean-ascent-c676279fa2a5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2.5 rounded-md border border-border bg-white/[0.01] p-2.5 hover:border-muted-foreground/20 transition-colors"
+                >
+                  <div className="h-6 w-6 shrink-0 rounded bg-emerald-500/10 flex items-center justify-center">
+                    <span className="text-[10px] font-bold">M</span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-medium group-hover:text-foreground/90 transition-colors">
+                      A Nietzschean Ascent
+                    </p>
+                    <p className="text-[10px] text-muted-foreground/40">
+                      medium.com →
+                    </p>
+                  </div>
+                </a>
+              </div>
             </motion.div>
 
             {/* 2. Currently Learning */}
@@ -301,13 +326,12 @@ export function PersonalSlide() {
                 ))}
               </div>
             </motion.div>
-
             {/* 3. Hobbies */}
             <motion.div
               className="rounded-lg border border-border bg-card/60 p-5 backdrop-blur-sm"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.4, ease }}
+              transition={{ delay: 0.5, duration: 0.4, ease }}
             >
               <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground/30 mb-3">
                 ⚡ Hobbies
@@ -348,7 +372,8 @@ export function PersonalSlide() {
                   <div>
                     <p className="text-sm font-medium">Gym</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
-                      I lift 5 days a week following a Push, Pull, Legs, Arms, Chest &amp; Back split.
+                      I lift 5 days a week following a Push, Pull, Legs, Arms,
+                      Chest &amp; Back split.
                     </p>
                   </div>
                 </div>
