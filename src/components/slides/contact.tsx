@@ -16,8 +16,8 @@ const links = [
 export function ContactSlide() {
   return (
     <Slide id="contact">
-      <div className="flex min-h-full w-full items-center px-6 sm:px-16 lg:px-24 py-16 sm:py-0">
-        <div className="mx-auto w-full max-w-3xl">
+      <div className="flex min-h-full w-full items-center justify-center px-6 sm:px-16 lg:px-24 py-16 sm:py-0">
+        <div className="mx-auto w-full max-w-3xl rounded-lg border border-border bg-card/40 p-8 sm:p-12 backdrop-blur-sm text-center">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -26,17 +26,17 @@ export function ContactSlide() {
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50">
               04 — Contact
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl max-w-lg">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-4xl max-w-lg mx-auto">
               Interested in building ambitious things together?
             </h2>
-            <p className="mt-4 text-base text-muted-foreground/60 max-w-md leading-relaxed">
+            <p className="mt-4 text-base text-muted-foreground/60 max-w-md mx-auto leading-relaxed">
               I&apos;m always open to discussing new opportunities, engineering
               challenges, or ways to contribute to your team.
             </p>
           </motion.div>
 
           <motion.div
-            className="mt-10 flex flex-wrap gap-3"
+            className="mt-6 lg:mt-8 flex flex-wrap justify-center gap-3"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3, ease }}

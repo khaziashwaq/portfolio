@@ -150,10 +150,10 @@ export function PhilosophySlide() {
             >
               <span className="text-sm font-mono text-accent-color/60">01</span>
               <div>
-                <p className="text-sm font-semibold tracking-wider uppercase">
+                <p className="pillar-title text-sm font-semibold tracking-wider uppercase">
                   {pillars[0].title}
                 </p>
-                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
+                <p className="pillar-text mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[0].text}
                 </p>
               </div>
@@ -175,10 +175,10 @@ export function PhilosophySlide() {
             >
               <span className="text-sm font-mono text-accent-color/60">02</span>
               <div>
-                <p className="text-sm font-semibold tracking-wider uppercase">
+                <p className="pillar-title text-sm font-semibold tracking-wider uppercase">
                   {pillars[1].title}
                 </p>
-                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
+                <p className="pillar-text mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[1].text}
                 </p>
               </div>
@@ -201,10 +201,10 @@ export function PhilosophySlide() {
             >
               <span className="text-sm font-mono text-accent-color/60">03</span>
               <div>
-                <p className="text-sm font-semibold tracking-wider uppercase">
+                <p className="pillar-title text-sm font-semibold tracking-wider uppercase">
                   {pillars[2].title}
                 </p>
-                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
+                <p className="pillar-text mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[2].text}
                 </p>
               </div>
@@ -226,10 +226,10 @@ export function PhilosophySlide() {
             >
               <span className="text-sm font-mono text-accent-color/60">04</span>
               <div>
-                <p className="text-sm font-semibold tracking-wider uppercase">
+                <p className="pillar-title text-sm font-semibold tracking-wider uppercase">
                   {pillars[3].title}
                 </p>
-                <p className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
+                <p className="pillar-text mt-1.5 text-xs leading-snug text-muted-foreground/70">
                   {pillars[3].text}
                 </p>
               </div>

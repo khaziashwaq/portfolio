@@ -22,18 +22,30 @@ const challenges: Challenge[] = [
     number: "01",
     title: "Glaze UI",
     objective:
-      "Reduce friction of building accessible, type-safe React interfaces.",
+      "Accessible, type-safe React component library with zero friction.",
     approach:
-      "Composable component library on Radix UI primitives with full TypeScript generics and zero-config Tailwind integration.",
-    outcome:
-      "Open-source library enabling rapid accessible development with zero runtime CSS overhead.",
+      "Composable primitives on Radix UI with TypeScript generics and zero-config Tailwind.",
+    outcome: "Open-source library used for rapid accessible UI development.",
     stack: ["TypeScript", "React", "Tailwind CSS", "Radix UI"],
     decisions: [
-      "Chose Radix UI to get accessibility and usability right from the start instead of reinventing core components.",
-      "Used TypeScript generics to make the API safer and easier to scale as the project grew.",
-      "Kept Tailwind setup minimal and zero-config to reduce friction and move faster.",
+      "Built on Radix UI for correct accessibility out of the box.",
+      "TypeScript generics for a safer, scalable component API.",
     ],
     link: "https://github.com/Rugz007/glaze-ui",
+  },
+  {
+    number: "02",
+    title: "CalmCove",
+    objective: "AI-powered mental health journaling with community sharing.",
+    approach:
+      "Next.js 14 + Firebase full-stack app with Groq LLaMA 3.1 mood insights and Google OAuth.",
+    outcome:
+      "Deployed wellness platform with AI journaling and a community story feed.",
+    stack: ["Next.js 14", "TypeScript", "Firebase", "Groq AI", "Tailwind CSS"],
+    decisions: [
+      "Groq LLaMA 3.1 via serverless routes for low-latency mood insights.",
+      "Google OAuth + middleware-protected routes with ambient Framer Motion UI.",
+    ],
   },
 ];
 
@@ -58,7 +70,7 @@ export function ChallengesSlide() {
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50">
               03 — Challenges
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-4xl">
               Problems Solved
             </h2>
             <p className="mt-2 text-base text-muted-foreground/60">
@@ -66,11 +78,11 @@ export function ChallengesSlide() {
             </p>
           </motion.div>
 
-          <div className="mt-10 space-y-4">
+          <div className="mt-6 lg:mt-8 grid gap-4 lg:grid-cols-2">
             {challenges.map((c, i) => (
               <motion.article
                 key={c.number}
-                className="rounded-lg border border-border overflow-hidden"
+                className="rounded-lg border border-border overflow-hidden flex flex-col"
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 + i * 0.1, ease }}
@@ -96,7 +108,7 @@ export function ChallengesSlide() {
                   )}
                 </div>
 
-                <div className="p-4 sm:p-5 space-y-4">
+                <div className="p-4 sm:p-5 space-y-4 flex-1 flex flex-col">
                   <div>
                     <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/30 mb-1">
                       Objective
@@ -142,7 +154,7 @@ export function ChallengesSlide() {
                     </ul>
                   </div>
 
-                  <div className="flex flex-wrap gap-1 pt-1">
+                  <div className="flex flex-wrap gap-1 pt-1 mt-auto">
                     {c.stack.map((t) => (
                       <span
                         key={t}

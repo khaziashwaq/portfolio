@@ -69,7 +69,7 @@ export function AscentSlide() {
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50 mt-5">
               02 — Ascent
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-4xl">
               Progression
             </h2>
             <p className="mt-2 text-base text-muted-foreground/60">
@@ -79,7 +79,7 @@ export function AscentSlide() {
 
           {/* Next summit */}
           <motion.div
-            className="mt-10 mb-1 flex items-center gap-3 pl-7"
+            className="mt-6 lg:mt-8 mb-1 flex items-center gap-3 pl-7"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.4 }}

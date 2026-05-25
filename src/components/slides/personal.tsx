@@ -227,7 +227,7 @@ export function PersonalSlide() {
             <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50">
               05 — Personal
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-4xl">
               Off the Clock
             </h2>
           </motion.div>
