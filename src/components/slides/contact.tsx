@@ -10,7 +10,6 @@ const links = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/ashwaq-khazi/" },
   { label: "GitHub", href: "https://github.com/khaziashwaq" },
   { label: "Email", href: "mailto:ashwaqkhazi1729@gmail.com" },
-  { label: "Twitter / X", href: "https://x.com/" },
 ];
 
 export function ContactSlide() {
