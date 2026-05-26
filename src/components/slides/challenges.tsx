@@ -46,6 +46,7 @@ const challenges: Challenge[] = [
       "Groq LLaMA 3.1 via serverless routes for low-latency mood insights.",
       "Google OAuth + middleware-protected routes with ambient Framer Motion UI.",
     ],
+    link: "https://github.com/khaziashwaq/CalmCove",
   },
 ];
 
@@ -60,7 +61,7 @@ const papers = [
 export function ChallengesSlide() {
   return (
     <Slide id="challenges">
-      <div className="flex min-h-full w-full items-start sm:items-center px-6 sm:px-16 lg:px-24 py-16 sm:py-0">
+      <div className="flex min-h-full w-full items-start sm:items-center px-6 sm:px-16 lg:px-24 py-10 sm:py-0">
         <div className="mx-auto w-full max-w-4xl">
           <motion.div
             initial={{ opacity: 0 }}
