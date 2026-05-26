@@ -217,7 +217,7 @@ export function PersonalSlide() {
         aria-hidden="true"
       />
 
-      <div className="relative flex min-h-full w-full flex-col items-center justify-start sm:justify-center px-4 sm:px-16 lg:px-24 py-10 sm:py-12">
+      <div className="relative flex min-h-full w-full flex-col items-center justify-start sm:justify-center px-4 sm:px-16 lg:px-24 sm:py-12">
         <div className="mx-auto w-full max-w-5xl">
           <motion.div
             initial={{ opacity: 0 }}
