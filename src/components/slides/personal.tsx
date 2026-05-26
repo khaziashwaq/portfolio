@@ -217,7 +217,7 @@ export function PersonalSlide() {
         aria-hidden="true"
       />
 
-      <div className="relative flex min-h-full w-full flex-col items-center justify-start sm:justify-center px-4 sm:px-16 lg:px-24 sm:py-12">
+      <div className="relative flex min-h-full w-full flex-col items-center justify-start sm:justify-center px-4 sm:px-16 lg:px-24">
         <div className="mx-auto w-full max-w-5xl">
           <motion.div
             initial={{ opacity: 0 }}
@@ -241,7 +241,7 @@ export function PersonalSlide() {
               transition={{ delay: 0.2, duration: 0.4, ease }}
             >
               <div className="flex items-center justify-between mb-4">
-                <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground/30">
+                <p className="text-md font-mono uppercase tracking-wider text-muted-foreground/30">
                   📚 Library
                 </p>
                 <a
@@ -288,7 +288,7 @@ export function PersonalSlide() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.4, ease }}
             >
-              <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground/30 mb-3">
+              <p className="text-md font-mono uppercase tracking-wider text-muted-foreground/30 mb-3">
                 🧠 Currently Learning
               </p>
               <div className="rounded-md border border-border bg-white/[0.01] p-3">
@@ -303,7 +303,7 @@ export function PersonalSlide() {
                     <p className="text-xs text-muted-foreground/50 mt-0.5">
                       ByteByteGo
                     </p>
-                    <p className="mt-1.5 text-sm text-muted-foreground/60 leading-relaxed">
+                    <p className="mt-1.5 text-md text-muted-foreground/60 leading-relaxed">
                       Distributed systems patterns, load balancing, database
                       sharding, and microservices at scale.
                     </p>
@@ -333,14 +333,14 @@ export function PersonalSlide() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.4, ease }}
             >
-              <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground/30 mb-3">
+              <p className="text-md font-mono uppercase tracking-wider text-muted-foreground/30 mb-3">
                 ⚡ Hobbies
               </p>
               <div className="space-y-2">
                 <div className="flex items-start gap-3 rounded-md border border-border bg-white/[0.01] p-2.5">
                   <span className="text-base">🥊</span>
                   <div>
-                    <p className="text-sm font-medium">MMA</p>
+                    <p className="text-md font-medium">MMA</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
                       I follow the UFC closely and have recently started doing
                       bag work and shadow boxing.
@@ -350,7 +350,7 @@ export function PersonalSlide() {
                 <div className="flex items-start gap-3 rounded-md border border-border bg-white/[0.01] p-2.5">
                   <span className="text-base">🧗</span>
                   <div>
-                    <p className="text-sm font-medium">Bouldering</p>
+                    <p className="text-md font-medium">Bouldering</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
                       I'm an intermediate climber and I enjoy cracking the beta.
                     </p>
@@ -359,7 +359,7 @@ export function PersonalSlide() {
                 <div className="flex items-start gap-3 rounded-md border border-border bg-white/[0.01] p-2.5">
                   <span className="text-base">🎹</span>
                   <div>
-                    <p className="text-sm font-medium">Keyboard</p>
+                    <p className="text-md font-medium">Keyboard</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
                       Self-taught keyboard player. Currently learning fur elise
                       by beethoven. I find it relaxing and a nice break from
@@ -370,7 +370,7 @@ export function PersonalSlide() {
                 <div className="flex items-start gap-3 rounded-md border border-border bg-white/[0.01] p-2.5">
                   <span className="text-base">🏋️</span>
                   <div>
-                    <p className="text-sm font-medium">Gym</p>
+                    <p className="text-md font-medium">Gym</p>
                     <p className="text-xs text-muted-foreground/60 mt-0.5 leading-relaxed">
                       I lift 5 days a week following a Push, Pull, Legs, Arms,
                       Chest &amp; Back split.

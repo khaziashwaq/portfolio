@@ -102,7 +102,7 @@ export function ChallengesSlide() {
                       href={c.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+                      className="flex items-center gap-1 text-md text-muted-foreground/50 transition-colors hover:text-muted-foreground"
                     >
                       Source <ExternalLink className="h-3 w-3" />
                     </a>
@@ -124,7 +124,7 @@ export function ChallengesSlide() {
                       <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/30 mb-1">
                         Approach
                       </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-md text-muted-foreground leading-relaxed">
                         {c.approach}
                       </p>
                     </div>
@@ -132,7 +132,7 @@ export function ChallengesSlide() {
                       <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground/30 mb-1">
                         Outcome
                       </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-md text-muted-foreground leading-relaxed">
                         {c.outcome}
                       </p>
                     </div>
@@ -146,7 +146,7 @@ export function ChallengesSlide() {
                       {c.decisions.map((d, j) => (
                         <li
                           key={j}
-                          className="flex gap-2 text-sm text-muted-foreground"
+                          className="flex gap-2 text-md text-muted-foreground"
                         >
                           <span className="mt-[6px] h-px w-2 shrink-0 bg-border" />
                           {d}

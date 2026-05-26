@@ -66,7 +66,7 @@ export function AscentSlide() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease }}
           >
-            <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50 mt-5">
+            <p className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground/50">
               02 — Ascent
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-4xl">
@@ -129,7 +129,7 @@ export function AscentSlide() {
                     </span>
                   </div>
 
-                  <p className="mt-0.5 text-sm text-muted-foreground/60">
+                  <p className="mt-0.5 text-md text-muted-foreground/60">
                     {cp.role}
                   </p>
 
@@ -137,7 +137,7 @@ export function AscentSlide() {
                     {cp.achievements.map((a, i) => (
                       <li
                         key={i}
-                        className="flex gap-2 text-sm text-muted-foreground"
+                        className="flex gap-2 text-md text-muted-foreground"
                       >
                         <span className="mt-[6px] h-px w-2 shrink-0 bg-border" />
                         {a}

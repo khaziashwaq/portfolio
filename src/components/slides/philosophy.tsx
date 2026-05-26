@@ -72,14 +72,14 @@ function QuoteRotator() {
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            className="text-sm italic text-muted-foreground/40 leading-relaxed"
+            className="text-md italic text-muted-foreground/40 leading-relaxed"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.35, ease }}
           >
             <p>&ldquo;{nietzscheQuotes[index]}&rdquo;</p>
-            <p className="mt-1 text-xs not-italic font-mono text-muted-foreground/25">
+            <p className="mt-1 text-md not-italic font-mono text-muted-foreground/25">
               — Friedrich Nietzsche
             </p>
           </motion.div>
